@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Portal | MyMAR.com</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Faculty Portal</h2>
+        <h3>Student Submissions</h3>
+        <ul>
+            {% for student, submission in submissions %}
+                <li>
+                    <p>Student: {{ student }}</p>
+                    <p>Activity: {{ submission.activity }}</p>
+                    <p>Duration: {{ submission.duration }}</p>
+                    <p>Points: {{ submission.points }}</p>
+                    <p>Participated: {{ submission.participated }}</p>
+                    <p>Total Points: {{ submission.t_points }}</p>
+                    <p><a href="{{ url_for('download_file', filename=submission.file) }}">Download File</a></p>
+                </li>
+            {% endfor %}
+        </ul>
+        <form id="faculty-box">
+            <label for="students">Students:</label>
+            <input type="text" id="students" name="students" required><br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea><br>
+            <button type="submit">Send Notification</button>
+        </form>
+    </div>
+</body>
+</html>

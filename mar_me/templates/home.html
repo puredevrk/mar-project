@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAR Submission | MyMAR.com</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='resp.js') }}" defer></script>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="navList v-class">
+            <div id="logo">
+                <img src="{{ url_for('static', filename='img/mar.png') }}" alt="MyMAR.com">
+            </div>
+            <ul>
+                <li class="item"><a href="/">Home</a></li>
+                <li class="item"><a href="#services">Upcoming Events</a></li>
+                <li class="item"><a href="#moocs-section">MOOCS</a></li>
+                <li class="item"><a href="/submission">Submission Portal</a></li>
+                <li class="item"><a href="#contact">Contact Us</a></li>
+                <li class="item"><a href="/login">Login</a></li>
+            </ul>
+        </div>
+        <div class="rightNav v-class">
+            <input type="text" name="search" id="search">
+            <button class="btn">Search</button>
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">Welcome!!!</h1>
+        <p>After completing higher studies, a student is expected to solve societal problems.</p>
+        <p>She/he should be able to identify and solve current and future societal issues.</p>
+        <p>They should be able to work in a team and contribute to society.</p>
+        <p>The world around us is changing rapidly.</p>
+    </section>
+</body>
+</html>

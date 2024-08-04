@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Portal | MyMAR.com</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Submission Portal</h2>
+        <form method="post" enctype="multipart/form-data">
+            <label for="serial">Serial No:</label>
+            <input type="text" id="serial" name="serial" required><br>
+            <label for="activity">Activity:</label>
+            <input type="text" id="activity" name="activity" required><br>
+            <label for="duration">Duration:</label>
+            <input type="text" id="duration" name="duration" required><br>
+            <label for="points">Points:</label>
+            <input type="text" id="points" name="points" required><br>
+            <label for="participated">Participated:</label>
+            <input type="text" id="participated" name="participated" required><br>
+            <label for="t_points">Total Points:</label>
+            <input type="text" id="t_points" name="t_points" required><br>
+            <label for="file">Upload File:</label>
+            <input type="file" id="file" name="file" required><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
